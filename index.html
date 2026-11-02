@@ -1,9 +1,164 @@
-<!DOCTYPE html>
-<html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<title>Frank Sanacory</title>
+<link href="style/page.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="https://sanacory.com/style/ow.jpg" type="image/jpg">
+<script src="style/menu.js"></script>
+</head>
+
+
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<div id="header">
+  <div id="name">
+	Frank Sanacory
+  </div>
+<br clear="all">
 
-</body>
-</html>
+  <div id="credentials">
+  Ph.D., University of South Carolina, Columbia, 2007<br>
+  Associate Professor of Mathematics<br>
+  the College at Old Westbury<br>
+  </div>
+</div>  
+
+
+
+<div id="main">
+
+<div id="right">
+<img src="style/OWNAB_iaJZ.jpg" width="300">
+</div>
+
+
+<div id="left">
+<table>
+<tbody><tr>
+<th align="left">Phone:</th>
+<td>I don't think I have one<br>
+</td>
+</tr>
+
+<tr>
+<th align="left">Dept. Fax:</th>
+<td>(516) 876-3478 </td>
+</tr>
+
+<tr>
+<th align="left">Office:</th>
+<td>3001 NAB
+</td>
+</tr>
+
+<!-- <tr>
+<th align="left">Office Hours:</th>
+<td> Summer hours
+</td>
+</tr>
+-->
+
+<tr>
+<th align="left">Email:</th>
+<td>
+SanacoryF AT oldwestbury DOT edu
+</td>
+</tr>
+
+<tr>
+<th align="left">Mail:</th>
+<td>
+Department of Mathematics
+
+<br>Frank Sanacory
+<br>Department of Mathematics and CIS
+<br>SUNY Old Westbury
+<br>223 Store Hill Road
+<br>PO Box 210, Old Westbury NY 11568-0210
+<br>(516) 876-3127/3176</td>
+</tr>
+</tbody></table>
+
+</div>
+
+</div>
+
+<br>
+<br>
+
+
+
+
+
+<div id="footer">
+<p id = "menu"></p>
+</div>
+
+<br><br><br><br>
+
+<p></p>
+<p style="font-family: Arial; font-size: 9px;" id="daysleft"> </p>
+<br>
+<p style="font-size: 9px;" id="RD">I am 27.893 % complete. <br><br></p>
+<br>
+<p style="font-size: 9px;" id="ToD"> </p>
+
+<script>
+const d2 = new Date("2024-06-05T12:00:00Z"); //start of RP Date
+const dnow = new Date(); //
+let DateDiff = Math.floor((dnow-d2)/86400000*24); //For TR Date
+
+//Work is Complete
+// In hourly periods 365*24 =8760
+// 0.77/8760 = 0.00008790
+//
+let HDep = 0.77/8760;
+let HIr = 1.07**(1/8760)-1;
+
+let RPer = 22;
+for (let i = 0; i < DateDiff; i++) {
+  RPer = RPer+RPer*HIr+HDep;
+} 
+RPer = RPer.toFixed(3);
+document.getElementById("RD").innerHTML = "I am " + RPer +  " % complete. <br><br>";
+
+</script>
+
+<div class="container">
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar" style="width: 7.33%;"></div>
+        </div>
+        <!-- The message will be injected here by JavaScript -->
+        <p style="font-size: 9px;" id="progressText">RoverLP is  7.33% complete.</p> 
+</div>
+
+    <script>
+        // Define the start, end, and current dates
+        const startDate = new Date('2026-07-20');
+        const endDate = new Date('2030-05-20');
+        const currentDate = new Date(); // Uses today's live date
+
+        // Calculate total duration and elapsed time in milliseconds
+        const totalDuration = endDate - startDate;
+        const elapsedDuration = currentDate - startDate;
+
+        // Ensure elapsed duration stays within the bounds of 0 and total duration
+        const safeElapsed = Math.max(0, Math.min(elapsedDuration, totalDuration));
+
+        // Calculate the percentage
+        const completionPercentage = (safeElapsed / totalDuration) * 100;
+        const formattedPercentage = completionPercentage.toFixed(2);
+
+        // Update the HTML text with your custom string
+        document.getElementById('progressText').innerText = `RoverLP is  ${formattedPercentage}% complete.`;
+
+        // Update the visual progress bar width
+        document.getElementById('progressBar').style.width = `${formattedPercentage}%`;
+    </script>
+
+
+
+
+
+</body></html>
