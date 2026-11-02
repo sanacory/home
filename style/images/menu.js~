@@ -1,0 +1,23 @@
+
+function start()
+{
+var menu = document.getElementById("menu");
+
+var footermenu = "<table width = 92%><tbody><tr><td><a href='http://www.sanacory.net/index.html'>Main</a> | ";
+footermenu += "<a href='http://www.sanacory.net/courses.html'>Courses</a> | <a href='http://www.sanacory.net/research.html'>Research</a> <br><br>";
+footermenu += "<a href='https://www.oldwestbury.edu/departments/mathematics</a> | ";
+footermenu += "<a href='http://www.oldwestbury.edu'>College at Old Westbury</a><br><br>";
+footermenu += "<a href='http://www.sanacory.net/coffee.html'>Coffee</a> | ";
+footermenu += "<a href='http://www.sanacory.net/cap.html'>CAP</a> | ";
+footermenu += "<a href='http://www.sanacory.net/rating/rating.html'>Rating</a>";
+footermenu += "<br><br></td></tr></tbody></table><br clear='all'>";
+
+
+
+menu.innerHTML = footermenu;
+}
+
+window.addEventListener("load", start, false);
+
+
+
